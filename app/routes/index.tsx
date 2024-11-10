@@ -1,6 +1,4 @@
-import * as fs from "node:fs";
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
-import { createServerFn } from "@tanstack/start";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -9,7 +7,11 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      Index
+      <div>
+        Welcome to Cleric!!!
+        <br />
+        This is ✨ugly✨ as i am tryna get atproto workin
+      </div>
       <Link to="/login">Login</Link>
     </>
   );
