@@ -10,6 +10,7 @@ function Home() {
   return (
     <>
       Index
+      <Link to="/login">Login</Link>
     </>
   );
 }

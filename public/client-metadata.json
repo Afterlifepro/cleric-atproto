@@ -1,0 +1,11 @@
+{
+  "client_name": "Cleric",
+  "client_id": "https://cleric.vielle.dev/client-metadata.json",
+  "client_uri": "https://cleric.vielle.dev",
+  "redirect_uris": ["https://cleric.vielle.dev/oauth/callback"],
+  "scope": "atproto transition:generic",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "application_type": "web",
+  "token_endpoint_auth_method": "none",
+  "dpop_bound_access_tokens": true
+}
