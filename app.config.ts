@@ -1,6 +1,11 @@
-import "dotenv/config";
 import { defineConfig } from "@tanstack/start/config";
 import viteTsConfigPaths from "vite-tsconfig-paths";
+import { load } from "ts-dotenv";
+
+export const env = load({
+  DEV: Boolean,
+  B64PWORD: String,
+});
 
 export default defineConfig({
   server: {

@@ -10,7 +10,8 @@
     "paths": {
         "@/*": ["./app/*"],
         "@routes/*": ["./app/routes/*"],
-        "@server/*": ["./app/server/*"]
+        "@server/*": ["./app/server/*"],
+        "@config": ["./app.config.ts"]
       }
   }
 }

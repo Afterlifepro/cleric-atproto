@@ -2,12 +2,11 @@ import {
   NodeOAuthClient,
   NodeSavedSession,
   NodeSavedState,
-  Session,
 } from "@atproto/oauth-client-node";
-import { dev } from "@/config";
+import { env } from "@config";
 
 const publicUrl = "https://cleric.vielle.dev";
-const url = dev ? "http://127.0.0.1:3000" : publicUrl; // since I'm using ipv4, use 127.0.0.1 instead of ::1
+const url = env.DEV ? "http://127.0.0.1:3000" : publicUrl; // since I'm using ipv4, use 127.0.0.1 instead of ::1
 const enc = encodeURIComponent;
 
 // this is a temporary db object
@@ -67,10 +66,9 @@ export const atclient = new NodeOAuthClient({
     },
   },
 
-
   clientMetadata: {
     client_name: "Cleric",
-    client_id: !dev
+    client_id: !env.DEV
       ? `${publicUrl}/client-metadata.json`
       : `http://localhost?redirect_uri=${enc(`${url}/oauth/callback`)}&scope=${enc("atproto transition:generic")}`,
     client_uri: url,
