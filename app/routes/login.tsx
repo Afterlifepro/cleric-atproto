@@ -10,7 +10,7 @@ export const Route = createFileRoute("/login")({
 function RouteComponent() {
   const [doingAuth, setDoingAuth] = useState(false);
 
-  const form = useForm({
+  const Form = useForm({
     defaultValues: {
       handle: "",
     },
@@ -31,11 +31,11 @@ function RouteComponent() {
         onSubmit={(e) => {
           e.preventDefault();
           e.stopPropagation();
-          form.handleSubmit();
+          Form.handleSubmit();
         }}
       >
         <div>
-          <form.Field
+          <Form.Field
             name="handle"
             children={(field) => (
               <input
